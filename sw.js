@@ -1,11 +1,11 @@
 const CACHE_NAME = "pwa-v1";
 
 const FILES = [
-  "/index.html",
-  "/style.css",
-  "/app.js",
-  "/manifest.json",
-  "/icon-512.png"
+  "./index.html",
+  "./style.css",
+  "./app.js",
+  "./manifest.json",
+  "./icon-512.png"
 ];
 
 self.addEventListener("install", (e) => {
@@ -22,7 +22,7 @@ self.addEventListener("activate", (e) => {
 // THIS PART FIXES iPhone OFFLINE
 self.addEventListener("fetch", (e) => {
   if (e.request.mode === "navigate") {
-    e.respondWith(caches.match("/index.html"));
+    e.respondWith(caches.match("./index.html"));
     return;
   }
 
