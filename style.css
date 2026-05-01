@@ -1,0 +1,92 @@
+
+body {
+font-family: 'Segoe UI', sans-serif;
+background-image: linear-gradient(to top right, #080715, #2B0F41);
+display: flex;
+justify-content: center;
+align-items: center;
+min-height: 100vh;
+margin: 0;
+}
+.container {
+background-image: linear-gradient(to top right, #4126AB, #5E3386);
+padding: 2rem;
+border-radius: 12px;
+box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+width: 100%;
+max-width: 420px;
+}
+h1 {
+text-align: center;
+color: #ffffff;
+margin-bottom: 1.5rem;
+}
+.password-display {
+background: #f8fafc;
+border: 2px solid #e2e8f0;
+border-radius: 8px;
+padding: 1rem;
+font-size: 1.3rem;
+font-family: monospace;
+word-break: break-all;
+margin-bottom: 1rem;
+position: relative;
+}
+.copy-btn {
+position: absolute;
+top: 10px;
+right: 10px;
+background: #3b82f6;
+color: white;
+border: none;
+padding: 6px 12px;
+border-radius: 6px;
+cursor: pointer;
+font-size: 0.9rem;
+}
+.options {
+margin: 1.5rem 0;
+}
+label {
+display: flex;
+align-items: center;
+margin: 0.8rem 0;
+font-size: 1rem;
+}
+input[type="checkbox"] {
+margin-right: 10px;
+transform: scale(1.2);
+}
+.length-control {
+display: flex;
+align-items: center;
+gap: 15px;
+margin: 1rem 0;
+}
+input[type="range"] {
+flex: 1;
+}
+.generate-btn {
+width: 100%;
+padding: 14px;
+background: #243C71;
+color: white;
+border: none;
+border-radius: 8px;
+font-size: 1.1rem;
+cursor: pointer;
+margin: 1.5rem 0;
+}
+.generate-btn:hover {
+background: #132B60;
+}
+.strength {
+text-align: center;
+font-weight: bold;
+padding: 10px;
+border-radius: 6px;
+margin: 1rem 0;
+}
+.weak { background: #fee2e2; color: #b91c1c; }
+.medium { background: #fef3c7; color: #b45309; }
+.strong { background: #ecfdf5; color: #0f766e; }

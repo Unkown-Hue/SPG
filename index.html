@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="apple-mobile-new-app-title" content="SPG"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="default" />
+<title>Secure Password Generator</title>
+<link rel="stylesheet" href="style.css">
+<link rel="apple-touch-icon" href="icon-512.png">
+<link rel="manifest" href="manifest.json"/>
+</head>
+<body>
+<div class="container">
+<h1>Password Generator</h1>
+
+<div class="password-display" id="password">Click Generate</div>
+<button class="copy-btn" onclick="copyPassword()">Copy</button>
+
+<div class="length-control">
+<label>Length: <span id="lengthValue">16</span></label>
+<input type="range" id="length" min="8" max="128" value="16" oninput="updateLength(this.value)">
+</div>
+
+<button class="generate-btn" onclick="generatePassword()">Generate Password</button>
+
+<div id="strength" class="strength">—</div>
+</div>
+
+<script src="app.js"></script>
+<script>
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", () => {
+        navigator.serviceWorker.register("/sw.js")
+          .then(() => console.log("SW registered"))
+          .catch(err => console.log("SW failed", err));
+      });
+    }
+    generatePassword();
+</script>
+</body>
+</html>
